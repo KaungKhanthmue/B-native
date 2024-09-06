@@ -10,5 +10,13 @@
     { "name": "eight category" },
     { "name": "nine category" },
     { "name": "ten category" }
+  ],
+  "popularxs":[
+    { "name": "one x"},
+    { "name": "two x"},
+    { "name": "three x"},
+    { "name": "four x"},
+    { "name": "five x"},
+    { "name": "six x"}
   ]
 }

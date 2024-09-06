@@ -10,10 +10,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import {
   AdjustmentsHorizontalIcon,
   TrashIcon,
+  Bars4Icon,
+  ArrowRightIcon
 } from "react-native-heroicons/solid";
 import { SvgXml } from "react-native-svg";
-import { categories } from "../../data.json";
+import { categories,popularxs } from "../../data.json";
 import Category from "./components/Category.js";
+import PopularCard from "./components/PopularCard.js";
 
 const HomeScreen = () => {
   const [name, setName] = useState("kaung khant hmue");
@@ -37,8 +40,8 @@ const HomeScreen = () => {
               </View>
               <View>
                 <TouchableOpacity>
-                  <View className="bg-gray-400 p-2 rounded-full mr-2">
-                    <TrashIcon size={24} color={"black"} />
+                  <View className="bg-white p-2 rounded-full mr-2">
+                    <Bars4Icon size={24} color={"black"} />
                   </View>
                 </TouchableOpacity>
               </View>
@@ -68,6 +71,21 @@ const HomeScreen = () => {
             <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mx-1 mt-2">
               {categories.map((category, index) => (
                 <Category key={index} category={category} />
+              ))}
+            </ScrollView>
+          </View>
+        </View>
+        <View className="mt-2  ">
+          <View className="mx-4">
+              <View className="flex-row justify-between w-full ">
+              <Text className="text-lg text-[#f19c13] mt-1">Poular X</Text>
+              <View className="p-2 bg-gray-300 rounded-full">
+                <ArrowRightIcon size={20} color={'black'}/>
+              </View>
+              </View>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} className=" mt-2">
+              {popularxs.map((popularx, index) => (
+                <PopularCard key={index} popularx={popularx} />
               ))}
             </ScrollView>
           </View>
