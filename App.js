@@ -21,7 +21,7 @@ function App() {
             ),
           }}
         />
-                <Tab.Screen
+        <Tab.Screen
           name="X"
           component={HomeScreen}
           options={{
