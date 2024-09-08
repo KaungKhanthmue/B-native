@@ -4,12 +4,12 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
-  TouchableWithoutFeedback,
 } from "react-native";
 import React from "react";
 import {
   AdjustmentsHorizontalIcon,
-  ArrowRightIcon,
+  ArrowsRightLeftIcon,
+  ArrowsUpDownIcon,
 } from "react-native-heroicons/solid";
 import { SvgXml } from "react-native-svg";
 import { categories, popularxs } from "../../data.json";
@@ -29,8 +29,8 @@ const HomeScreen = () => {
       <View className="py-1 mt-1 bg-white">
           <View className="flex-row justify-between w-full px-2">
             <Text className="text-lg text-black mt-1 ml-2">Popular Foods</Text>
-            <View className="p-2 bg-black rounded-xl">
-              <ArrowRightIcon size={20} color={"white"} />
+            <View className="p-2  rounded-xl">
+              <ArrowsRightLeftIcon size={20} color={"black"} />
             </View>
           </View>
           <ScrollView
@@ -76,8 +76,8 @@ const HomeScreen = () => {
         <View className="py-1 mt-1 bg-white">
           <View className="flex-row justify-between w-full px-2">
             <Text className="text-lg text-black mt-1 ml-2">Foods</Text>
-            <View className="p-2 bg-black rounded-xl">
-              <ArrowRightIcon size={20} color={"white"} />
+            <View className="p-2 rounded-xl">
+              <ArrowsUpDownIcon size={20} color={"black"} />
             </View>
           </View>
           <View className="flex-row flex-wrap justify-center mt-2 ">
