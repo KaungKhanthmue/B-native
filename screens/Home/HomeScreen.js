@@ -16,6 +16,7 @@ import { categories, popularxs } from "../../data.json";
 import Category from "./components/Category.js";
 import Card from "./components/Card.js";
 import Nav from "../../Components/Nav.js";
+import PopularCard from "./components/PopularCard.js";
 
 const HomeScreen = () => {
   const SearchIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -39,7 +40,7 @@ const HomeScreen = () => {
             className="mt-2 flex-row"
           >
             {popularxs.map((popularx, index) => (
-              <Card key={index} popularx={popularx} cls={{ width: "w-[110px]", height: "h-[100px]" ,mb:"mb-2" }}/>
+              <PopularCard key={index} popularx={popularx}/>
             ))}
           </ScrollView>
         </View>
@@ -60,7 +61,12 @@ const HomeScreen = () => {
         </View>
 
         <View className="py-1 mt-1 bg-white">
-          <Text className="text-lg text-black px-4">Categories</Text>
+            <View className="flex-row justify-between">
+            <Text className="text-lg text-black px-4">Categories</Text>
+          <View className="p-2 rounded-xl mr-2">
+              <ArrowsRightLeftIcon size={20} color={"black"} />
+            </View>
+            </View>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -82,7 +88,7 @@ const HomeScreen = () => {
           </View>
           <View className="flex-row flex-wrap justify-center mt-2 ">
             {popularxs.map((popularx, index) => (
-              <Card key={index} popularx={popularx} cls={{ width: "w-[180px]", height: "h-[200px]" ,mb:"mb-2" }}/>
+              <Card key={index} popularx={popularx} />
             ))}
           </View>
         </View>
