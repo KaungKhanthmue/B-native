@@ -1,12 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
 
-const Card = (popularx) => {
+const Card = ({ popularx, cls }) => {
+  const width = cls?.width || "w-[200px]";
+  const height = cls?.height || "h-[180px]";
+
   return (
-    <View className="mx-1 w-[200px] h-[180] bg-white flex-row items-center justify-center rounded-xl shadow-2xl">
-      <Text>PopularCard</Text>
+    <View className={`ml-1 ${width} ${height} ${cls?.mb} bg-black items-center justify-center text-white rounded-xl shadow-2xl `}>
+      <Text className="text-white">Food</Text>
     </View>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
