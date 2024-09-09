@@ -12,11 +12,12 @@ import {
   ArrowsUpDownIcon,
 } from "react-native-heroicons/solid";
 import { SvgXml } from "react-native-svg";
-import { categories, popularxs } from "../../data.json";
+import { categories } from "../../data.json";
 import Category from "./components/Category.js";
 import Card from "./components/Card.js";
 import Nav from "../../Components/Nav.js";
 import PopularCard from "./components/PopularCard.js";
+import {foodDatas} from "../../data.json";
 
 const HomeScreen = () => {
   const SearchIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -39,8 +40,8 @@ const HomeScreen = () => {
             showsHorizontalScrollIndicator={false}
             className="mt-2 flex-row"
           >
-            {popularxs.map((popularx, index) => (
-              <PopularCard key={index} popularx={popularx}/>
+            {foodDatas.map((foodData, index) => (
+              <PopularCard key={index} foodData={foodData}/>
             ))}
           </ScrollView>
         </View>
@@ -87,8 +88,8 @@ const HomeScreen = () => {
             </View>
           </View>
           <View className="flex-row flex-wrap justify-center mt-2 ">
-            {popularxs.map((popularx, index) => (
-              <Card key={index} popularx={popularx} />
+            {foodDatas.map((foodData, index) => (
+              <Card key={index} foodData={foodData} />
             ))}
           </View>
         </View>

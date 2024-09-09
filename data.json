@@ -1,22 +1,72 @@
 {
   "categories": [
-    { "name": "one category" },
-    { "name": "two x" },
-    { "name": "three category" },
-    { "name": "four category" },
-    { "name": "five category" },
-    { "name": "six category" },
-    { "name": "seven category" },
-    { "name": "eight category" },
-    { "name": "nine category" },
-    { "name": "ten category" }
+    { "name": "Traditional food"},
+    { "name": "BBQ" },
+    { "name": "BreakFast" },
+    { "name": "Lunch" },
+    { "name": "Dessert" },
+    { "name": "Dinner" },
+    { "name": "Drinks" },
+    { "name": "Coffee" },
+    { "name": "Alcohol" },
+    { "name": "Sweet" }
   ],
-  "popularxs":[
-    { "name": "one x"},
-    { "name": "two x"},
-    { "name": "three x"},
-    { "name": "four x"},
-    { "name": "five x"},
-    { "name": "six x"}
+  
+  "foodDatas" :[
+    {
+      "id": "1",
+      "name":"Good food && nothing else if ",
+      "price": "5000",
+      "deli_fee": "700",
+      "image":"https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "2",
+      "name":"Good Food",
+      "price": "10000",
+      "deli_fee": "700",
+      "image":"https://images.pexels.com/photos/958544/pexels-photo-958544.jpeg"
+    },
+    {
+      "id": "3",
+      "name":"ထမင်းကြော်အသားစုံးတစ်ပွဲ",
+      "price": "5000",
+      "deli_fee": "700",
+      "image":"https://images.pexels.com/photos/10541694/pexels-photo-10541694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "id": "4",
+      "name":"Good food",
+      "price": "5000",
+      "deli_fee": "700",
+      "image":"https://images.pexels.com/photos/2689419/pexels-photo-2689419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "id" : "5",
+      "name":"Good food",
+      "price": "5000",
+      "deli_fee": "700",
+      "image": "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "id": "6",
+      "name":"Good food",
+      "price": "5000",
+      "deli_fee": "700",
+      "image":"https://images.pexels.com/photos/1860208/pexels-photo-1860208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "id": "7",
+      "name":"Good food",
+      "price": "5000",
+      "deli_fee": "700",
+      "image":"https://images.pexels.com/photos/15529651/pexels-photo-15529651/free-photo-of-photo-of-a-plate-of-pasta-with-meatballs.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "id": "8",
+      "name":"Good food",
+      "price": "5000",
+      "image":"https://images.pexels.com/photos/27294732/pexels-photo-27294732/free-photo-of-a-fish-is-in-a-pan-with-tomatoes-and-herbs.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
   ]
 }

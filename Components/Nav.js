@@ -38,7 +38,7 @@ const Nav = () => {
   return (
     <>
       <SafeAreaView>
-        <View className="flex-row justify-between  gap-2 bg-black mt-1 pb-2">
+        <View className="flex-row justify-between  gap-2 bg-black mt-0.5 pb-2">
           <View className="flex-row w-[50%] ">
             <TouchableOpacity onPress={() => setSidebar(true)}>
               <View className=" p-2 rounded-md mr-2">
@@ -59,16 +59,15 @@ const Nav = () => {
               </View>
             </TouchableOpacity>
             <TouchableOpacity className="">
-  <View className="w-[40px] h-[40px] bg-gray-300 rounded-l-xl p-1">
-    <Image
-      source={{
-        uri: 'https://img.freepik.com/premium-vector/print_349618-27844.jpg?w=826'
-      }}
-      className="w-[30px] h-[30px] rounded-l-xl"
-    />
-  </View>
-</TouchableOpacity>
-
+              <View className="w-[40px] h-[40px] bg-gray-300 rounded-l-xl p-1">
+                <Image
+                  source={{
+                    uri: "https://img.freepik.com/premium-vector/print_349618-27844.jpg?w=826",
+                  }}
+                  className="w-[30px] h-[30px] rounded-l-xl"
+                />
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
       </SafeAreaView>
@@ -81,7 +80,7 @@ const Nav = () => {
 
       <Animated.View
         style={{ transform: [{ translateX: slideAnim }] }}
-        className="absolute z-20 w-[60%] left-0 h-full mt-10 bg-gray-300 bg-opacity-50  border border-black"
+        className="absolute z-20 w-[60%] left-0 h-full mt-9 bg-gray-300 bg-opacity-50  border border-black"
       >
         <View className="flex-row pt-1 justify-center">
           <View className="w-[97%] p-4 bg-black rounded-sm">
@@ -91,17 +90,16 @@ const Nav = () => {
         <View className="flex-row pt-1 justify-center">
           <View className="w-[95%]  px-1 flex-row justify-center">
             <View className="flex-col pt-2 justify-center">
-
               <View className="w-full p-1 bg-white shadow-2xl rounded-xl flex-row">
-                <View className="w-[50px] h-[50px]  bg-black rounded-full"></View>
+                <View className="w-[50px] h-[50px]  bg-black rounded-l-xl"></View>
                 <Text className="w-[73%] h-fit ml-2 text-black text-base flex-row flex-wrap font-semibold py-3">
-                  Foods 
+                  Foods
                 </Text>
               </View>
               <View className="w-full p-1 bg-white mt-2 shadow-xl   rounded-xl flex-row ">
-                <View className="w-[50px] h-[50px]  bg-black rounded-full"></View>
+                <View className="w-[50px] h-[50px]  bg-black rounded-l-xl"></View>
                 <Text className="w-[73%] h-fit ml-2  text-black text-base flex-row flex-wrap font-semibold py-3">
-                Clothes 
+                  Clothes
                 </Text>
               </View>
             </View>
