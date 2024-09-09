@@ -1,8 +1,8 @@
 import { View, Text} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import { useRoute } from "@react-navigation/native";
 import Nav from "../../Components/Nav"
+import Body from "./Body";
 
 const List = () => {
   const route = useRoute();
@@ -11,7 +11,7 @@ const List = () => {
   return (
     <>
     <Nav useFor={"List"} category={category}/>
-
+    <Body />
     </>
   );
 };
