@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/Home/HomeScreen";
-import Friend from "./screens/Friend/index";
+import List from "./screens/List";
 import Profile from "./screens/Profile/header";
 
 const Stack = createStackNavigator();
@@ -22,11 +22,9 @@ function App() {
           }}
         />
         <Stack.Screen
-          name="Friend"
-          component={Friend}
-          options={{
-          }}
-        />
+        name="List"
+        component={List}
+        options={{}}/>
         <Stack.Screen
           name="Profile"
           component={Profile}
