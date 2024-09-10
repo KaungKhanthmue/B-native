@@ -4,10 +4,11 @@ import { ArrowLeftIcon, Bars4Icon, ShoppingCartIcon } from 'react-native-heroico
 import { useNavigation } from '@react-navigation/native';
 
 const Nav = ({ useFor, category }) => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false); // Sidebar state
   const slideAnim = useRef(new Animated.Value(-300)).current;
   const navigation = useNavigation();
 
+  // Handle sidebar animation based on its state
   useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: sidebar ? 0 : -300,
@@ -18,11 +19,12 @@ const Nav = ({ useFor, category }) => {
 
   return (
     <>
-      <View className="pt-[34px] bg-[#edf84cf3]">
+      <View className="pt-[34px] bg-[#dbe64af3]">
         <View className="flex-row justify-between gap-2 mt-0.5">
           <View className="flex-row w-[50%] pb-1">
             {useFor === 'Home' ? (
               <>
+                {/* Trigger sidebar open */}
                 <TouchableOpacity onPress={() => setSidebar(true)}>
                   <View className="p-2 rounded-md mr-2">
                     <Bars4Icon size={24} color="black" />
@@ -38,7 +40,7 @@ const Nav = ({ useFor, category }) => {
             ) : (
               <>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                  <View className="p-1 mt-1   rounded-md mx-2 border border-black">
+                  <View className="p-1 mt-1 rounded-md mx-2 border border-black">
                     <ArrowLeftIcon size={24} color="black" />
                   </View>
                 </TouchableOpacity>
@@ -52,13 +54,16 @@ const Nav = ({ useFor, category }) => {
               </>
             )}
           </View>
+
           <View className="w-[50%] flex-row justify-end pr-5">
             <TouchableOpacity>
               <View className="px-2 py-3 rounded-md">
                 <ShoppingCartIcon size={18} color="black" />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+
+            {/* Redirect to Login */}
+            <TouchableOpacity onPress={() => navigation.navigate('LoginUser')}>
               <View className="w-[40px] h-[40px] bg-black rounded-l-xl p-1">
                 <Image
                   source={{
@@ -72,16 +77,27 @@ const Nav = ({ useFor, category }) => {
         </View>
       </View>
 
+      {/* Transparent backdrop to close sidebar */}
       {sidebar && (
-        <TouchableOpacity onPress={() => setSidebar(false)} style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'transparent', zIndex: 10 }} />
+        <TouchableOpacity
+          onPress={() => setSidebar(false)}
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'transparent',
+            zIndex: 10,
+          }}
+        />
       )}
 
+      {/* Sidebar animation */}
       <Animated.View
         style={{ transform: [{ translateX: slideAnim }] }}
         className="absolute z-20 w-[70%] left-0 h-full mt-9 bg-gray-100 opacity-80 rounded-md"
       >
         <View className="flex-row p justify-center">
-          <View className="w-[97%] p-4 bg-[#edf84cf3] border border-black  rounded-b-md">
+          <View className="w-[97%] p-4 bg-[#edf84cf3] border border-black rounded-b-md">
             <Text className="text-black font-bold">Bagan Shops</Text>
           </View>
         </View>
@@ -90,13 +106,13 @@ const Nav = ({ useFor, category }) => {
             <View className="flex-col pt-2 justify-center">
               <TouchableOpacity className="w-full p-1 border border-black shadow-2xl rounded-l-xl flex-row">
                 <View className="w-[50px] h-[50px] bg-black rounded-l-xl" />
-                <Text className="w-[73%] h-fit ml-2 text-black text-base flex-row flex-wrap font-semibold py-3">
+                <Text className="w-[73%] ml-2 text-black text-base font-semibold py-3">
                   Foods
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity className="w-full p-1 border border-black mt-2 shadow-xl rounded-l-xl flex-row">
                 <View className="w-[50px] h-[50px] bg-black rounded-l-xl" />
-                <Text className="w-[73%] h-fit ml-2 text-black text-base flex-row flex-wrap font-semibold py-3">
+                <Text className="w-[73%] ml-2 text-black text-base font-semibold py-3">
                   Clothes
                 </Text>
               </TouchableOpacity>
