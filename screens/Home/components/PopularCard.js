@@ -1,12 +1,25 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
+import { View, Text, Image, TouchableWithoutFeedback } from 'react-native'
+import React, { useState } from 'react'
 
-const PopularCard = ({foodData}) => {
-    return (
-      <View className={`ml-1 w-[110px] h-[100px] bg-black items-center justify-center text-white rounded-xl shadow-2xl border-2 border-black  `}>
-        <Image className="w-full h-full rounded-xl" source={{uri: `${foodData.image}`}} />
+const PopularCard = ({restaurantData}) => {
+  const [nameSlide, setNameSlide] = useState(false);
+
+  return (
+    <TouchableWithoutFeedback
+      onPressIn={() => setNameSlide(true)}
+      onPressOut={() => setNameSlide(false)}
+    >
+      <View className="relative ml-1 w-[170px] h-[150px] bg-black items-center justify-center text-white rounded-md shadow-2xl border-2 border-black">
+        <Image className="w-full h-full rounded-xl" source={{uri: `${restaurantData.image}`}} />
+        {nameSlide && (
+          <View style={{ backgroundColor: 'rgba(55, 55, 55, 0.75)' }} className="absolute w-full h-[100px] bottom-0 rounded-b-xl">
+            <Text className="text-xs font-extrabold px-1 text-white">{restaurantData.name}</Text>
+            <Text className="text-xs font-light px-1 text-white">Loacation : {restaurantData.address}</Text>
+          </View>
+        )}
       </View>
-    );
+    </TouchableWithoutFeedback>
+  );
 }
 
-export default PopularCard
+export default PopularCard;

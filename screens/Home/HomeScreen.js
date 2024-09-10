@@ -12,7 +12,7 @@ import {
   ArrowsUpDownIcon,
 } from "react-native-heroicons/solid";
 import { SvgXml } from "react-native-svg";
-import { categories, foodDatas } from "../../data.json";
+import { categories, foodDatas,restaurantDatas } from "../../data.json";
 import Category from "./components/Category.js";
 import Card from "./components/Card.js";
 import Nav from "../../Components/Nav.js";
@@ -24,6 +24,7 @@ const HomeScreen = () => {
 </svg>`;
 
   const [search, setSearch] = useState('');
+  const [searchRestaurant, setSearchRestaurant] = useState('');
 
   const filteredFoodData = foodDatas.filter(foodData => {
     const name = foodData.name ? foodData.name.toLowerCase() : '';
@@ -37,10 +38,27 @@ const HomeScreen = () => {
   return (
     <>
       <Nav useFor={"Home"} />
+      <View className="bg-white">
+        <View className="mx-4 py-1">
+          <View className="absolute z-10 top-[30%] left-[5px]">
+            <SvgXml xml={SearchIcon} color={"gray"} width={26} height={26} />
+          </View>
+          <TextInput
+            keyboardType="default"
+            placeholder="search Restaurant"
+            value={search}
+            onChangeText={(text) => setSearchRestaurant(text)}
+            className="px-2 py-1 placeholder:px-10 rounded-md bg-gray-300"
+          />
+          <TouchableOpacity className="absolute z-10 top-[30%] right-[5px] border-l">
+            <AdjustmentsHorizontalIcon color={"black"} size={26} />
+          </TouchableOpacity>
+        </View>
+      </View>
 
       <View className="py-1 mt-1 bg-black">
         <View className="flex-row justify-between w-full px-2">
-          <Text className="text-lg text-white font-semibold mt-1 border border-b-[#edf84cf3]  mb-1">Popular Foods</Text>
+          <Text className="text-lg text-white font-semibold mt-1 border border-b-[#edf84cf3]  mb-1">Restaurant</Text>
           <View className="p-2 rounded-xl">
             <ArrowsRightLeftIcon size={20} color={"white"} />
           </View>
@@ -50,8 +68,8 @@ const HomeScreen = () => {
           showsHorizontalScrollIndicator={false}
           className="py-1 flex-row bg-white"
         >
-          {foodDatas.map((foodData, index) => (
-            <PopularCard key={index} foodData={foodData} />
+          {restaurantDatas.map((restaurantData, index) => (
+            <PopularCard key={index} restaurantData={restaurantData} />
           ))}
         </ScrollView>
       </View>

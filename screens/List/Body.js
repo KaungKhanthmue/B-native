@@ -17,7 +17,7 @@ const Body = ({category}) => {
   });
 
   return (
-    <View>
+    <View className="mb-32">
       <View className="bg-white">
         <View className="mx-4 py-1">
           <View className="absolute z-10 top-[30%] left-[5px]">
