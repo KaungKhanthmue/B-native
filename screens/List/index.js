@@ -11,7 +11,7 @@ const List = () => {
   return (
     <>
     <Nav useFor={"List"} category={category}/>
-    <Body />
+    <Body category={category}/>
     </>
   );
 };
