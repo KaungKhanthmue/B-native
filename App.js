@@ -6,6 +6,7 @@ import LoginUser from "./screens/Auth/LoginUser";
 import Register from "./screens/Auth/Register";
 import List from "./screens/List";
 import Profile from "./screens/Profile/index";
+import Detail from "./screens/Detail/index";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ function App() {
         <Stack.Screen name="LoginUser" component={LoginUser} options={{}} />
         <Stack.Screen name="RegisterUser" component={Register} options={{}} />
         <Stack.Screen name="List" component={List} options={{}} />
+        <Stack.Screen name="Detail" component={Detail} options={{}}/>
         <Stack.Screen name="Profile" component={Profile} options={{}} />
       </Stack.Navigator>
     </NavigationContainer>

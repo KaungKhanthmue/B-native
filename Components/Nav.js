@@ -3,12 +3,11 @@ import { View, Text, TouchableOpacity, Image, Animated } from 'react-native';
 import { ArrowLeftIcon, Bars4Icon, ShoppingCartIcon } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 
-const Nav = ({ useFor, category }) => {
-  const [sidebar, setSidebar] = useState(false); // Sidebar state
+const Nav = ({ useFor, category,foodName }) => {
+  const [sidebar, setSidebar] = useState(false); 
   const slideAnim = useRef(new Animated.Value(-300)).current;
   const navigation = useNavigation();
 
-  // Handle sidebar animation based on its state
   useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: sidebar ? 0 : -300,
@@ -22,7 +21,7 @@ const Nav = ({ useFor, category }) => {
       <View className="pt-[34px] bg-[#dbe64af3]">
         <View className="flex-row justify-between gap-2 mt-0.5">
           <View className="flex-row w-[50%] pb-1">
-            {useFor === 'Home' ? (
+            {useFor === 'Home' && (
               <>
                 {/* Trigger sidebar open */}
                 <TouchableOpacity onPress={() => setSidebar(true)}>
@@ -37,7 +36,9 @@ const Nav = ({ useFor, category }) => {
                   </View>
                 </View>
               </>
-            ) : (
+            )}
+            {useFor === "List" && 
+             (
               <>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                   <View className="p-1 mt-1 rounded-md mx-2 border border-black">
@@ -53,6 +54,19 @@ const Nav = ({ useFor, category }) => {
                 </View>
               </>
             )}
+            {useFor === "Detail" && 
+             (
+              <>
+                <View className="flex-row justify-between w-[90%] ml-2">
+                  <View>
+                    <Text className="text-black text-md font-bold py-2">
+                        {foodName} Detail
+                    </Text>
+                  </View>
+                </View>
+              </>
+            )}
+
           </View>
 
           <View className="w-[50%] flex-row justify-end pr-5">
