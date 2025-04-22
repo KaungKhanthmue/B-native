@@ -38,7 +38,7 @@ const HomeScreen = () => {
   return (
     <>
       <Nav useFor={"Home"} />
-      <View className="bg-white">
+      {/* <View className="bg-white">
         <View className="mx-4 py-1">
           <View className="absolute z-10 top-[30%] left-[5px]">
             <SvgXml xml={SearchIcon} color={"gray"} width={26} height={26} />
@@ -54,11 +54,11 @@ const HomeScreen = () => {
             <AdjustmentsHorizontalIcon color={"black"} size={26} />
           </TouchableOpacity>
         </View>
-      </View>
+      </View> */}
 
       <View className="py-1 mt-1 bg-black">
         <View className="flex-row justify-between w-full px-2">
-          <Text className="text-lg text-white font-semibold mt-1 border border-b-[#edf84cf3]  mb-1">Restaurant</Text>
+          <Text className="text-lg text-white font-semibold mt-1 border border-b-[#363818f3]  mb-1">Restaurant</Text>
           <View className="p-2 rounded-xl">
             <ArrowsRightLeftIcon size={20} color={"white"} />
           </View>
@@ -91,7 +91,7 @@ const HomeScreen = () => {
         </View>
       </View>
 
-      <View className="pb-1 mt-1 bg-black">
+      <View className="pb-1 mt-1 bg-black border-yellow-100 border-b">
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}

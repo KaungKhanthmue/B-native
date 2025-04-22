@@ -22,7 +22,7 @@ const Category = ({ category }) => {
           source={{ uri: `${category.image}` }}
         />
       </View>
-      <Text className="text-black font-semibold text-xs p-1 text-center">
+      <Text className="text-black font-semibold  text-[10px] p-1 text-center">
         {category.name}
       </Text>
     </TouchableOpacity>

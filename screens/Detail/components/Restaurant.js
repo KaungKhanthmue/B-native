@@ -5,7 +5,7 @@ const Restaurant = ({restaurant}) => {
   return (
     <>
         <View className="py-1">
-            <View className="bg-black w-full  flex-row">
+            <View className="bg-gray-800 w-full  flex-row">
                 <View className="w-[42%]">
                     <View className="w-[150px] h-[150px] p-1 border border-gray-300 ml-1 my-1">
                     <Image source={{uri: restaurant.image}} className="w-full h-full " />

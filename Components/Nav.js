@@ -18,7 +18,7 @@ const Nav = ({ useFor, category,foodName }) => {
 
   return (
     <>
-      <View className="pt-[34px] bg-[#dbe64af3]">
+      <View className="pt-[34px] bg-[#888a6ff3]">
         <View className="flex-row justify-between gap-2 mt-0.5">
           <View className="flex-row w-[50%] pb-1">
             {useFor === 'Home' && (
@@ -32,7 +32,7 @@ const Nav = ({ useFor, category,foodName }) => {
                 <View className="flex-row justify-between w-[84%]">
                   <View>
                     <Text className="text-black font-bold">Welcome</Text>
-                    <Text className="text-gray-900 italic">From Bagan Foods</Text>
+                    <Text className="text-gray-900 italic font-semibold">From Bagan</Text>
                   </View>
                 </View>
               </>
@@ -108,10 +108,10 @@ const Nav = ({ useFor, category,foodName }) => {
       {/* Sidebar animation */}
       <Animated.View
         style={{ transform: [{ translateX: slideAnim }] }}
-        className="absolute z-20 w-[70%] left-0 h-full mt-9 bg-gray-100 opacity-80 rounded-md"
+        className="absolute z-20 w-[70%] left-0 h-full mt-9 bg-gray-100  rounded-md"
       >
-        <View className="flex-row p justify-center">
-          <View className="w-[97%] p-4 bg-[#edf84cf3] border border-black rounded-b-md">
+        <View className="flex-row  justify-center">
+          <View className="w-[100%] p-4 bg-[#888a6ff3]">
             <Text className="text-black font-bold">Bagan Shops</Text>
           </View>
         </View>

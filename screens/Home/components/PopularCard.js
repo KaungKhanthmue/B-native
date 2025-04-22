@@ -16,7 +16,7 @@ const PopularCard = ({ restaurantData }) => {
       onPressIn={() => setNameSlide(true)}
       onPressOut={() => setNameSlide(false)}
     >
-      <View className="relative ml-1 w-[170px] h-[150px] bg-black items-center justify-center text-white rounded-md shadow-2xl border-2 border-black">
+      <View className="relative ml-1 w-[170px] h-[120px] bg-black items-center justify-center text-white rounded-md shadow-2xl border-2 border-black">
         <Image className="w-full h-full rounded-xl" source={{ uri: restaurantData.image }} />
         {nameSlide && (
           <View style={{ backgroundColor: 'rgba(55, 55, 55, 0.75)' }} className="absolute w-full h-[100px] bottom-0 rounded-b-xl">

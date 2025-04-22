@@ -15,7 +15,7 @@ const Index = () => {
       <Nav useFor={"Detail"} foodName={foodData.name} />
       <Restaurant restaurant={foodData.restaurant} />
     <ScrollView showsVerticalScrollIndicator={false} className="px-2 ">
-        <View className="w-full h-[300px] p-1 border border-black">
+        <View className="w-full h-[300px] rounded-md p-1 border border-black">
           <Image
             source={{ uri: `${foodData.image}` }}
             className="w-full h-full"
